@@ -1,0 +1,44 @@
+/* Styles for the custom container */
+.custom-container {
+  text-align: center;
+}
+
+/* Styles for the header */
+.custom-header {
+  padding: 15px;
+}
+
+/* Styles for the row */
+.custom-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Styles for the form */
+.custom-form {
+  width: 500%; /* Adjust this as needed */
+}
+
+/* Styles for the select element */
+.custom-select {
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+/* Styles for the select options */
+.custom-option {
+  padding: 10px;
+  border-radius: 0;
+}
+
+.custom-option::after {
+  background-color: #ffff;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}

@@ -1,0 +1,15 @@
+/* .container{
+    margin-left: 140px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 200px;
+    } */
+table {
+  width: 100%;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.spacing_swal {
+  padding-left: 100px;
+}

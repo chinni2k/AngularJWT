@@ -1,0 +1,117 @@
+
+<div
+  class="custom-container text-center"
+  style="
+    width: 400px;
+    box-shadow: 2px 4px 10px #888888;
+    border: none;
+    padding-top: 20px;
+    margin-top: 20px;
+  "
+>
+  <div class="custom-container text-center">
+    <h2>Add Location</h2>
+  </div>
+  <div class="custom-header">
+    <h4>Set State</h4>
+  </div>
+  <div class="custom-row">
+    <form [formGroup]="form" class="custom-form" style="width: 200px">
+      <select
+        id="stId"
+        class="custom-select"
+        formControlName="stId"
+        (change)="onSelectState()"
+      >
+        <option value="" disabled selected>Select State</option>
+        <option
+          *ngFor="let s of state"
+          [value]="s.id"
+          class="custom-option"
+          placeholer="Select State"
+        >
+          {{ s.state }}
+        </option>
+      </select>
+
+      <mat-form-field>
+        <mat-label style="font-family: Poppins">Select State</mat-label>
+        <mat-select
+          formControlName="stId"
+          (selectionChange)="onSelectState()"
+          class="form-field"
+        >
+          <mat-option *ngFor="let s of state" [value]="s.id">
+            {{ s.state }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <div class="custom-container text-center">
+        <div class="custom-header">
+          <h4>Set Hub</h4>
+        </div>
+        <div *ngIf="form.get('stId')?.value">
+          <select class="custom-select" formControlName="hubId">
+            <option
+              *ngFor="let s of Hub"
+              [value]="s.id"
+              class="custom-option"
+              placeholder="Select Hub"
+            >
+              {{ s.hub }}
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="custom-container text-center">
+        <div class="custom-header">
+          <h6>Enter the Location You need to Add:</h6>
+        </div>
+        <div class="custom-container text-center">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="custom-select"
+              placeholder="Location Name"
+              aria-label="Username"
+              formControlName="location"
+              aria-describedby="basic-addon1"
+              style="border-color: #888888"
+            />
+          </div>
+
+          <button
+            class="btn btn-primary"
+            style="margin-left: 110px; margin-bottom: 20px"
+            type="submit"
+            (click)="OnSubmit()"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- <mat-tab-group>
+  <mat-tab label="First"> Content 1 </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+<mat-tab-group preserveContent>
+  <mat-tab label="First">
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/B-lipaiZII8"
+      style="border: 0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  </mat-tab>
+  <mat-tab label="Second"
+    >Note how the video from the previous tab is still playing.</mat-tab
+  >
+</mat-tab-group> -->

@@ -1,0 +1,112 @@
+<!-- <app-topbar></app-topbar>
+<div class="container-fluid">
+  <div class="row">
+ 
+    <div class="col-md-2 d-none d-md-block">
+  <app-sidebar></app-sidebar>
+    </div>
+
+
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justifys-center">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <app-topbar></app-topbar>
+<div class="container-fluid">
+  <div class="row">
+   
+    <div class="col-md-2 d-none d-md-block">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justify-content-center vh-2 mt-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <app-topbar></app-topbar>
+<div class="container-fluid">
+  <div class="row">
+  Side Navigation Bar (Hidden on smaller screens) 
+    <div class="col-md-2 d-none d-md-block">
+      <app-sidebar></app-sidebar>
+    </div>
+Main Content Area 
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justify-content-center vh-2 mt-2">
+        <div class="main-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>-->
+
+<!-- <app-topbar></app-topbar>
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-md-2 d-none d-md-block">
+      <app-sidebar></app-sidebar>
+    </div>
+
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justify-content-center vh-2 mt-2">
+        <div class="main-content">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- 
+<div class="combined-container">
+  <app-sidebar></app-sidebar>
+  <div class="main-content">
+    <app-topbar></app-topbar>
+    <router-outlet></router-outlet>
+  </div>
+</div> -->
+
+<!--Currently using components-->
+<div class="combined-container">
+  <app-topbar></app-topbar>
+
+  <div class="sidebar-and-content">
+    <div class="row">
+      <div class="col-md-2 d-none d-md-block">
+        <app-sidebar #drawer></app-sidebar>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="col-md-15 ml-auto">
+        <div class="d-flex justify-content-center vh-2 mt-2">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <app-topbar></app-topbar>
+<div class="container-fluid">
+  <div class="row">
+   
+    <div class="col-md-2 d-none d-md-block">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-md-10 ml-auto">
+      <div class="d-flex justify-content-center vh-2 mt-2">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div> -->

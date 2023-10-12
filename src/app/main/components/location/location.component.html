@@ -1,0 +1,51 @@
+<mat-toolbar
+  class="mat-elevation-z6"
+  style="
+    background-color: #1783aa;
+    color: white;
+    font-family: Poppins;
+    border-radius: 5px;
+  "
+>
+  <span class="example-spacer"></span>
+  <div class="navbar-links">
+    <button
+      mat-raised-button
+      routerLink="add-state"
+      id="logout"
+      style="
+        background-color: white;
+        color: #1783aa;
+        font-family: Poppins;
+        margin-right: 10px;
+      "
+    >
+      Add State
+    </button>
+    <button
+      mat-raised-button
+      routerLink="add-hub"
+      id="logout"
+      style="
+        background-color: white;
+        color: #1783aa;
+        font-family: Poppins;
+        margin-right: 10px;
+      "
+    >
+      Add Hub
+    </button>
+    <button
+      mat-raised-button
+      routerLink="add-location"
+      id="logout"
+      style="background-color: white; color: #1783aa; font-family: Poppins"
+    >
+      Add Location
+    </button>
+  </div>
+</mat-toolbar>
+
+<br />
+<app-breadcrumb></app-breadcrumb>
+<router-outlet></router-outlet>

@@ -1,0 +1,113 @@
+.sidebar {
+  position: fixed;
+  top: 64px;
+  left: 0;
+  width: 60px;
+  height: 100%;
+  background-color: #f8f9fa;
+  z-index: 100;
+  transition: width 0.8s ease; /* Slower transition for the sidebar width */
+}
+
+/* Sidebar open on larger screens */
+.sidebar.sidebar-open {
+  width:250px;
+}
+
+/* Responsive adjustments */
+  @media (max-width: 992px) {
+  .sidebar {
+    width: 100%; /* Adjust width to cover full width on mobile */
+  }
+
+  .sidebar.sidebar-open {
+    width: 100%; /* Keep width at 100% when open on mobile */
+  }
+
+  .sidebar.sidebar-collapsed {
+    width: 60px; /* Adjust width for collapsed state on mobile */
+  }
+}
+.sidebar-content {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Container for nav links with fading */
+.nav-links-container {
+  opacity: 0;
+  transform: translateY(-10px) scale(0.95);
+  transition: opacity 0.15s ease, transform 0.1s ease; /* Faster transition for links */
+}
+
+/* Fade in and scale up nav links when sidebar opens */
+.sidebar-open .nav-links-container {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Active link styles */
+/* .nav-link.active {
+  background-color: #ddd;
+  color: #000;
+} */
+
+/* Toggle button */
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border: none;
+  z-index: 101;
+  cursor: pointer;
+  transition: left 0.8s ease;
+}
+
+mat-icon {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+mat-icon.menu-icon {
+  color: #1783aa;
+}
+
+mat-icon.close-icon {
+  color: #ff4500;
+  transform: rotate(180deg);
+}
+
+/* Nav link styles */
+.sidebar-content .nav-link {
+  position: relative;
+  color: #333;
+  text-decoration: none;
+  padding-left: 30px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Hover styles for nav links */
+.nav-link:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Hide the links smoothly when sidebar closes */
+.sidebar.sidebar-collapsed .sidebar-content {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}

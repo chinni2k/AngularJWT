@@ -1,0 +1,40 @@
+<nav
+  class="sidebar mat-elevation-z6"
+  [ngClass]="{
+    'sidebar-open': isSidebarOpen,
+    'sidebar-collapsed': !isSidebarOpen
+  }"
+>
+  <!-- Toggle button -->
+  <button
+    class="toggle-button"
+    (click)="toggleSidebar()"
+    [class.active]="isButtonActive"
+  >
+    <mat-icon class="menu-icon" *ngIf="!isSidebarOpen">menu</mat-icon>
+    <mat-icon class="close-icon" *ngIf="isSidebarOpen">close</mat-icon></button
+  ><br /><br />
+
+  <!-- Side navigation content -->
+  <div class="sidebar-content">
+    <!-- Show links only when sidebar is open -->
+    <div *ngIf="isSidebarOpen" class="nav-links-container">
+      <a
+        class="nav-link"
+        routerLink="dashboard"
+        [ngClass]="{ active: activeLink === 'dashboard' }"
+        (click)="setActiveLink('dashboard')"
+      >
+        <i class="fa-solid fa-house"></i>&nbsp;Home </a
+      ><br />
+      <a
+        class="nav-link"
+        routerLink="location"
+        [ngClass]="{ active: activeLink === '' }"
+        (click)="setActiveLink('location')"
+      >
+        <i class="fa-solid fa-gear"></i>&nbsp;Location
+      </a>
+    </div>
+  </div>
+</nav>

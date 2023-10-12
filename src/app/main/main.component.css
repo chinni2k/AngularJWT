@@ -1,0 +1,105 @@
+button {
+  font-family: Poppins;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  font-family: "font-family: Poppins";
+}
+
+.btnStyle {
+  border-radius: 2px;
+  border: none;
+  color: #1783aa;
+  background-color: #fff;
+  padding: 4px;
+  font-size: 20px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+}
+
+.navbar-link i {
+  margin-left: 5px; /* Adjust the spacing between the link text and the icon */
+}
+
+/* Add hover effect */
+.navbar-link:hover {
+  color: #fff; /* Change the link color on hover */
+}
+
+/* Add horizontal line on hover */
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%; /* Position the line at the center of the link */
+  transform: translateX(-50%); /* Center the line horizontally */
+  width: 0;
+  height: 2px;
+  background-color: transparent;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+.navbar-link:hover::before {
+  width: 100%; /* Expand the line to the full width of the link */
+  background-color: #fff; /* Change the line color on hover */
+}
+
+.btnStyle {
+  border-radius: 2px;
+  border: none;
+  color: #1783aa;
+  background-color: #fff;
+  padding: 7px;
+}
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8f9fa;
+  border: none;
+  z-index: 101;
+  cursor: pointer;
+  transition: left 0.8s ease;
+}
+
+
+
+.combined-container{
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar-and-content{
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar{
+  width: 250px;
+}
+
+.main-content{
+  flex:1;
+  overflow: auto;
+  padding-top: 64px;
+  transition: padding-top 0.3s ease;
+}

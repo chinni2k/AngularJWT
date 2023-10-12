@@ -1,0 +1,81 @@
+<!-- <mat-toolbar
+  color="primary"
+  style="background-color: #1783aa; padding: 13px"
+  [ngClass]="{ scrolled: scrolled }"
+>
+
+  <div style="margin-left: 20px">
+    <a
+      class="navbar-logo"
+      style="margin-left: 80px"
+      routerLink="dashboard"
+      style="text-decoration: none"
+      >RMS
+    </a>
+  </div>
+
+  <div class="navbar-links">
+    <a
+      mat-button
+      class="navbar-link"
+      routerLink="about"
+      routerLinkActive="active-link"
+      style="font-family: Poppins"
+    >
+      About <i class="fas fa-info-circle"></i>
+    </a>
+    <a
+      mat-button
+      class="navbar-link"
+      routerLink="contact"
+      routerLinkActive="active-link"
+      style="font-family: Poppins"
+    >
+      Contact &nbsp;<i class="far fa-envelope"></i>
+    </a>
+
+    
+    
+  </div>
+</mat-toolbar> -->
+
+<mat-toolbar
+  class="mat-elevation-z6"
+  style="background-color: #1783aa; color: white; font-family: Poppins"
+>
+  <!-- <button mat-button style="color: white">
+    <mat-icon>menu</mat-icon></button
+  > -->&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <span>RMS</span>
+  <span class="example-spacer"></span>
+  <div class="navbar-links">
+    <button
+      mat-button
+      class="navbar-link"
+      routerLink="about"
+      routerLinkActive="active-link"
+    >
+      about us&nbsp;<i class="fas fa-info-circle"></i>
+    </button>
+    <button
+      mat-button
+      class="navbar-link"
+      routerLink="contact"
+      routerLinkActive="active-link"
+    >
+      contact &nbsp;<i class="far fa-envelope" style="font-size: 20px"></i>
+    </button>
+    <h2 style="color: white; border-radius: 2px; font-size: 18px ;font-family: Poppins">
+      <span class="fa fa-user p-2"></span>{{ fullName }}
+    </h2>
+
+    <button
+      mat-raised-button
+      (click)="onClick6()"
+      id="logout"
+      style="background-color: white; color: #1783aa; font-family: Poppins"
+    >
+      Logout
+    </button>
+  </div>
+</mat-toolbar>
